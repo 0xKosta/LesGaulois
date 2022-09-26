@@ -30,9 +30,7 @@ public class Gaulois {
 
 	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
-		if (effetPotion == 3) {
-			parler("Merci druide, je sens que ma force est 3 fois decuplee");
-		}
+		parler("Merci druide, je sens que ma force est " + effetPotion + " fois decuplee");
 	}
 	
 	@Override 

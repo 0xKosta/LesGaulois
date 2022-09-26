@@ -29,22 +29,30 @@ public class Druide {
 	}
 	
 	public void booster(Gaulois gaulois) {
-		
+		if (gaulois.getNom() == "Obelix") {
+			parler("Non, Obelix!... Tu n'auras pas de poition magique!");
+		} else {
+			gaulois.boirePotion(forcePotion);
+		}
 	}
 	
 	public void preparerPotion() {
 		Random random = new Random();
-		int num = random.nextInt(effetPotionMin, effetPotionMax);
-		if (num > 7) {
-			System.out.println("J'ai prepare une super potion de force " + num + ".");
+		forcePotion = random.nextInt(effetPotionMin, effetPotionMax);
+		if (forcePotion > 7) {
+			System.out.println("J'ai prepare une super potion de force " + forcePotion + ".");
 		} else {
-			System.out.println("Je n'ai pas trouve tous les ingredients, ma potion est seulement de force " + num + ".");
+			System.out.println("Je n'ai pas trouve tous les ingredients, ma potion est seulement de force " + forcePotion + ".");
 		}
 	}
 	
 	public static void main(String[] args) {
+		Gaulois obelix = new Gaulois("Obelix", 18);
+		Gaulois asterix = new Gaulois("Asterix", 18);
 		Druide panoramix = new Druide("Panoramix", 5, 10);
 		panoramix.preparerPotion();
+		panoramix.booster(asterix);
+		panoramix.booster(obelix);
 	}
 	
 }

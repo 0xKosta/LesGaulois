@@ -32,6 +32,7 @@ public class Romain {
 	}
 	
 	public static void main(String[] args) {
+		//TODO creer un main qui permet de tester la classe Romain.
 		Romain cesar = new Romain("Cesar", 18);
 		System.out.println(cesar.prendreParole());
 		cesar.parler("Bonjour");

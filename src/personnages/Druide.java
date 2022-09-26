@@ -1,7 +1,9 @@
 package personnages;
+import java.util.random.*;
 
 public class Druide {
 	private String nom;
+	private int forcePotion = 1;
 	private int effetPotionMin;
 	private int effetPotionMax;
 	
@@ -24,6 +26,10 @@ public class Druide {
 	
 	public String prendreParole() {
 		return "Le druide " + nom + " : ";
+	}
+	
+	public void preparerPotion() {
+		
 	}
 	
 }

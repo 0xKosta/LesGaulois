@@ -1,5 +1,5 @@
 package personnages;
-import java.util.random.*;
+import java.util.Random;
 
 public class Druide {
 	private String nom;
@@ -29,6 +29,18 @@ public class Druide {
 	}
 	
 	public void preparerPotion() {
+		Random random = new Random();
+		int num = random.nextInt(effetPotionMin, effetPotionMax);
+		if (num > 7) {
+			System.out.println("J'ai prepare une super potion de force " + num + ".");
+		} else {
+			System.out.println("Je n'ai pas trouve tous les ingredients, ma potion est seulement de force " + num + ".");
+		}
+	}
+	
+	public static void main(String[] args) {
+		Druide panoramix = new Druide("Panoramix", 5, 10);
+		panoramix.preparerPotion();
 		
 	}
 	

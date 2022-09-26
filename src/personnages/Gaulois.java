@@ -28,6 +28,12 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3);
 	}
 
+	public void boirePotion(int forcePotion) {
+		effetPotion = forcePotion;
+		if (effetPotion == 3) {
+			parler("Merci druide, je sens que ma force est 3 fois decuplee");
+		}
+	}
 	
 	@Override 
 	public String toString() { 
@@ -46,6 +52,7 @@ public class Gaulois {
 		Romain marius = new Romain("Marius", 5);
 		asterix.frapper(cesar);
 		asterix.frapper(marius);
+		asterix.boirePotion(3);
 		System.out.println("END");
 	}
 }

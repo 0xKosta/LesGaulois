@@ -28,6 +28,10 @@ public class Druide {
 		return "Le druide " + nom + " : ";
 	}
 	
+	public void booster(Gaulois gaulois) {
+		
+	}
+	
 	public void preparerPotion() {
 		Random random = new Random();
 		int num = random.nextInt(effetPotionMin, effetPotionMax);
@@ -41,7 +45,6 @@ public class Druide {
 	public static void main(String[] args) {
 		Druide panoramix = new Druide("Panoramix", 5, 10);
 		panoramix.preparerPotion();
-		
 	}
 	
 }

@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Konstantin
+ *
+ */
+module LesGaulois {
+}

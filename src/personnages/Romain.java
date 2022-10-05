@@ -5,7 +5,7 @@ public class Romain {
 	private int force;
 	
 	public Romain(String nom, int force) {
-		super();
+		assert (force > 0);
 		this.nom = nom;
 		this.force = force;
 	}
@@ -33,7 +33,7 @@ public class Romain {
 	
 	public static void main(String[] args) {
 		//TODO creer un main qui permet de tester la classe Romain.
-		Romain cesar = new Romain("Cesar", 18);
+		Romain cesar = new Romain("Cesar", -6);
 		System.out.println(cesar.prendreParole());
 		cesar.parler("Bonjour");
 		cesar.recevoirCoup(10);

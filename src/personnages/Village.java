@@ -23,7 +23,7 @@ public class Village {
 	}
 	
 	public void ajouterHabitant(Gaulois gaulois) {
-		if (nbVillageois < 30) {
+		if (nbVillageois < villageois.length) {
 			villageois[nbVillageois] = gaulois;
 			nbVillageois += 1;	
 		} else {
@@ -61,7 +61,6 @@ public class Village {
 		Gaulois obelix = new Gaulois("Obelix", 25);
 		village.ajouterHabitant(obelix);
 		village.afficherVillageois();
-		
 	}
 }
 

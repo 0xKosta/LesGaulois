@@ -36,7 +36,6 @@ public class Romain {
 		}
 	}
 	
-
 	private void equipement(Equipement equipement) {
 		equipements[nbEquipement] = equipement;
 		nbEquipement++;

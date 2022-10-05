@@ -23,8 +23,13 @@ public class Village {
 	}
 	
 	public void ajouterHabitant(Gaulois gaulois) {
-		villageois[nbVillageois] = gaulois;
-		nbVillageois += 1;	
+		if (nbVillageois < 30) {
+			villageois[nbVillageois] = gaulois;
+			nbVillageois += 1;	
+		} else {
+			System.out.println("Ce village est plein! Le gaulois " + gaulois.getNom() +
+					" n'a pas ete rajoute!");
+		}
 	}
 	
 	public Gaulois trouverHabitant(int numeroVillageois) {

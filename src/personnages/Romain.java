@@ -12,6 +12,37 @@ public class Romain {
 		this.force = force;
 		this.equipements = new Equipement[2];
 	}
+	
+	public void sEquiper(Equipement equipement) {
+		switch(nbEquipement) {
+			case 2: {
+				System.out.println("Le soldat " + nom + " est deja bien protege!");
+				break;
+			}
+			case 1: {
+				if (equipements[0] == equipement) {
+					System.out.println("Le soldat " + nom + " possede deja un " + 
+							equipement + " !");
+					break;
+				} else {
+					equipement(equipement);
+					break;
+				}
+			}
+			default : {
+				equipement(equipement);
+				break;
+			}
+		}
+	}
+	
+
+	private void equipement(Equipement equipement) {
+		equipements[nbEquipement] = equipement;
+		nbEquipement++;
+		System.out.println("Le soldat " + nom + " s'equipe d'un " + 
+				equipement + ".");
+	}
 
 	public String getNom() {
 		return nom;
@@ -43,5 +74,10 @@ public class Romain {
 		cesar.recevoirCoup(10);
 		System.out.println(Equipement.CASQUE);
 		System.out.println(Equipement.BOUCLIER);
+		cesar.sEquiper(Equipement.CASQUE);
+		cesar.sEquiper(Equipement.CASQUE);
+		cesar.sEquiper(Equipement.BOUCLIER);
+		cesar.sEquiper(Equipement.CASQUE);
+		
 	}
 }

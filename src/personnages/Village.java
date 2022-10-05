@@ -2,9 +2,10 @@ package personnages;
 
 public class Village {
 	private String nom;
+	private Chef chef;
 	private Gaulois[] villageois;
 	private int nbVillageois = 0;
-	private Chef chef;
+	
 	
 	public Village(String nom, int nbVillageoisMaximum) {
 		this.nom = nom;
@@ -61,6 +62,7 @@ public class Village {
 		Gaulois obelix = new Gaulois("Obelix", 25);
 		village.ajouterHabitant(obelix);
 		village.afficherVillageois();
+		System.out.println(village.trouverHabitant(0));
 	}
 }
 

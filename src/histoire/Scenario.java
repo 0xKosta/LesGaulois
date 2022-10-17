@@ -11,6 +11,7 @@ public class Scenario {
 		personnages.Gaulois asterix = new personnages.Gaulois("Asterix", 6);
 		personnages.Romain minus = new personnages.Romain("Minus", 20);
 		personnages.Romain milexcus = new personnages.Romain("Milexcus", 8);
+		personnages.Musee musee = new personnages.Musee();
 		panoramix.parler("Je vais aller preparer une petite potion...");
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
@@ -29,6 +30,7 @@ public class Scenario {
 		for (i = 0; i < 4; i++) {
 			asterix.frapper(milexcus);
 		}
+		asterix.faireUneDonnation(musee);
 	}
 
 }
